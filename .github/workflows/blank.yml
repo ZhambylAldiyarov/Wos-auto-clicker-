@@ -144,20 +144,6 @@ jobs:
               val langNames = listOf("Русский", "English", "한국어", "中文", "العربية")
 
               private val ru = mapOf(
-                  "troop0" to "Пехота",
-                  "troop1" to "Копейщики",
-                  "troop2" to "Стрелки",
-                  "cycles" to "Циклов",
-                  "on" to "ВКЛ",
-                  "off" to "ВЫКЛ",
-                  "lethality" to "Смертоносность",
-                  "health" to "Здоровье",
-                  "troops_title" to "ВОЙСКА ДЛЯ ТРЕНИРОВКИ",
-                  "troops_note" to "Приложение само переключается между лагерями: в каждом включённом выполняет заданное число циклов.",
-                  "mode_title" to "РЕЖИМ",
-                  "mode0" to "Улучшение питомцев",
-                  "mode1" to "Тренировка войск",
-                  "hint_troops" to "1. Включите службу доступности\n2. Откройте лагерь на экране обучения войск\n3. Нажмите START. Приложение само нажимает Обучение → Ускорение → Быстрое применение → Применить и повторяет цикл. Жёлтые кнопки «Завершить» за алмазы не нажимаются",
                   "sub" to "Автоулучшение параметров питомцев",
                   "tab_home" to "Главная",
                   "tab_settings" to "Настройки",
@@ -165,7 +151,9 @@ jobs:
                   "svc_on" to "Служба включена",
                   "svc_off" to "Служба выключена",
                   "enable" to "Включить службу доступности",
-                  "param_title" to "ПАРАМЕТР ДЛЯ УЛУЧШЕНИЯ",
+                  "param_title" to "ПАРАМЕТР 1 ДЛЯ УЛУЧШЕНИЯ",
+                  "param2_title" to "ПАРАМЕТР 2 (НЕОБЯЗАТЕЛЬНО)",
+                  "none" to "— Не выбран —",
                   "stat0" to "Смертоносность пехоты",
                   "stat1" to "Здоровье пехоты",
                   "stat2" to "Смертоносность копейщиков",
@@ -180,6 +168,12 @@ jobs:
                   "lang_title" to "ЯЗЫК",
                   "max_tries" to "Максимум попыток",
                   "delay" to "Пауза после нажатия, мс",
+                  "allow_minus" to "ЗАМЕНЯТЬ ПРИ МИНУСЕ",
+                  "allow_minus_hint" to "Нажимать «Заменить», если параметр ушёл в небольшой минус, но общая мощность выросла",
+                  "on" to "Вкл",
+                  "off" to "Выкл",
+                  "power_th" to "Порог прироста мощности (зелёных пикселей)",
+                  "minus_th" to "Допустимый минус (красных пикселей в дельте)",
                   "support_title" to "Поддержать автора",
                   "support_text" to "Если приложение помогло вам, вы можете поддержать разработку переводом на карту. Это добровольно и ничего не открывает.",
                   "card_label" to "НОМЕР КАРТЫ",
@@ -189,20 +183,6 @@ jobs:
               )
 
               private val en = mapOf(
-                  "troop0" to "Infantry",
-                  "troop1" to "Lancers",
-                  "troop2" to "Marksmen",
-                  "cycles" to "Cycles",
-                  "on" to "ON",
-                  "off" to "OFF",
-                  "lethality" to "Lethality",
-                  "health" to "Health",
-                  "troops_title" to "TROOPS TO TRAIN",
-                  "troops_note" to "The app switches between camps by itself and runs the set number of cycles in each enabled one.",
-                  "mode_title" to "MODE",
-                  "mode0" to "Pet upgrade",
-                  "mode1" to "Troop training",
-                  "hint_troops" to "1. Enable the accessibility service\n2. Open a camp on the troop training screen\n3. Tap START. The app presses Train → Speed up → Quick use → Apply and repeats. The yellow gem 'Finish' buttons are never pressed",
                   "sub" to "Auto-upgrade for pet stats",
                   "tab_home" to "Home",
                   "tab_settings" to "Settings",
@@ -210,7 +190,9 @@ jobs:
                   "svc_on" to "Service enabled",
                   "svc_off" to "Service disabled",
                   "enable" to "Enable accessibility service",
-                  "param_title" to "STAT TO UPGRADE",
+                  "param_title" to "STAT 1 TO UPGRADE",
+                  "param2_title" to "STAT 2 (OPTIONAL)",
+                  "none" to "— None —",
                   "stat0" to "Infantry Lethality",
                   "stat1" to "Infantry Health",
                   "stat2" to "Lancer Lethality",
@@ -225,6 +207,12 @@ jobs:
                   "lang_title" to "LANGUAGE",
                   "max_tries" to "Max attempts",
                   "delay" to "Delay after tap, ms",
+                  "allow_minus" to "REPLACE ON MINUS",
+                  "allow_minus_hint" to "Press Replace if the stat went slightly down but total power grew",
+                  "on" to "On",
+                  "off" to "Off",
+                  "power_th" to "Power growth threshold (green pixels)",
+                  "minus_th" to "Allowed minus (red pixels in delta)",
                   "support_title" to "Support the author",
                   "support_text" to "If this app helped you, you can support development with a card transfer. It is voluntary and unlocks nothing.",
                   "card_label" to "CARD NUMBER",
@@ -234,20 +222,6 @@ jobs:
               )
 
               private val ko = mapOf(
-                  "troop0" to "보병",
-                  "troop1" to "창병",
-                  "troop2" to "궁병",
-                  "cycles" to "횟수",
-                  "on" to "켜짐",
-                  "off" to "꺼짐",
-                  "lethality" to "살상력",
-                  "health" to "체력",
-                  "troops_title" to "훈련할 병력",
-                  "troops_note" to "앱이 병영을 자동으로 전환하며, 켜진 병영마다 설정한 횟수만큼 반복합니다.",
-                  "mode_title" to "모드",
-                  "mode0" to "펫 강화",
-                  "mode1" to "병력 훈련",
-                  "hint_troops" to "1. 접근성 서비스를 켜세요\n2. 병영의 병력 훈련 화면을 여세요\n3. START를 누르세요. 훈련 → 가속 → 빠른 사용 → 적용을 자동으로 반복합니다. 보석을 쓰는 노란 '완료' 버튼은 누르지 않습니다",
                   "sub" to "펫 능력치 자동 강화",
                   "tab_home" to "홈",
                   "tab_settings" to "설정",
@@ -255,9 +229,11 @@ jobs:
                   "svc_on" to "서비스 켜짐",
                   "svc_off" to "서비스 꺼짐",
                   "enable" to "접근성 서비스 켜기",
-                  "param_title" to "강화할 능력치",
-                  "stat0" to "보병 살상력",
-                  "stat1" to "보병 체력",
+                  "param_title" to "강화할 능력치 1",
+                  "param2_title" to "능력치 2 (선택)",
+                  "none" to "— 없음 —",
+                  "stat0" to "병종 살상력",
+                  "stat1" to "병종 체력",
                   "stat2" to "창병 살상력",
                   "stat3" to "창병 체력",
                   "stat4" to "궁병 살상력",
@@ -270,6 +246,12 @@ jobs:
                   "lang_title" to "언어",
                   "max_tries" to "최대 시도 횟수",
                   "delay" to "탭 후 대기 시간 (ms)",
+                  "allow_minus" to "마이너스여도 교체",
+                  "allow_minus_hint" to "능력치가 소폭 하락하도 총 전투력이 상승하면 교체합니다",
+                  "on" to "켜기",
+                  "off" to "끄기",
+                  "power_th" to "전투력 상승 임계값 (녹색 픽셀)",
+                  "minus_th" to "허용 마이너스 (델타 빨간 픽셀)",
                   "support_title" to "개발자 후원하기",
                   "support_text" to "이 앱이 도움이 되었다면 카드 송금으로 개발을 후원해 주세요. 자율 후원이며 기능에는 영향이 없습니다.",
                   "card_label" to "카드 번호",
@@ -279,20 +261,6 @@ jobs:
               )
 
               private val zh = mapOf(
-                  "troop0" to "步兵",
-                  "troop1" to "枪兵",
-                  "troop2" to "弓兵",
-                  "cycles" to "次数",
-                  "on" to "开",
-                  "off" to "关",
-                  "lethality" to "杀伤",
-                  "health" to "生命",
-                  "troops_title" to "要训练的部队",
-                  "troops_note" to "应用会自动切换兵营，并在每个已开启的兵营中执行设定的循环次数。",
-                  "mode_title" to "模式",
-                  "mode0" to "宠物强化",
-                  "mode1" to "训练部队",
-                  "hint_troops" to "1. 开启无障碍服务\n2. 在兵营中打开部队训练界面\n3. 点击 START。应用会自动点击 训练 → 加速 → 快速使用 → 应用 并循环。不会点击消耗宝石的黄色“完成”按钮",
                   "sub" to "宠物属性自动强化",
                   "tab_home" to "主页",
                   "tab_settings" to "设置",
@@ -300,7 +268,9 @@ jobs:
                   "svc_on" to "服务已开启",
                   "svc_off" to "服务未开启",
                   "enable" to "开启无障碍服务",
-                  "param_title" to "要强化的属性",
+                  "param_title" to "要强化的属性 1",
+                  "param2_title" to "属性 2（可选）",
+                  "none" to "— 无 —",
                   "stat0" to "步兵杀伤",
                   "stat1" to "步兵生命",
                   "stat2" to "枪兵杀伤",
@@ -315,6 +285,12 @@ jobs:
                   "lang_title" to "语言",
                   "max_tries" to "最大尝试次数",
                   "delay" to "点击后等待时间（毫秒）",
+                  "allow_minus" to "属性下降时替换",
+                  "allow_minus_hint" to "属性小幅下降但总战力明显上升时仍点击替换",
+                  "on" to "开",
+                  "off" to "关",
+                  "power_th" to "战力增长阈值（绿像素）",
+                  "minus_th" to "允许降幅（delta 红像素）",
                   "support_title" to "支持作者",
                   "support_text" to "如果这个应用对您有帮助，欢迎通过银行卡转账支持开发。完全自愿，不会解锁任何功能。",
                   "card_label" to "银行卡号",
@@ -324,20 +300,6 @@ jobs:
               )
 
               private val ar = mapOf(
-                  "troop0" to "المشاة",
-                  "troop1" to "الرماحة",
-                  "troop2" to "الرماة",
-                  "cycles" to "الدورات",
-                  "on" to "تشغيل",
-                  "off" to "إيقاف",
-                  "lethality" to "الفتك",
-                  "health" to "الصحة",
-                  "troops_title" to "القوات المراد تدريبها",
-                  "troops_note" to "يتنقل التطبيق بين المعسكرات تلقائيًا وينفّذ عدد الدورات المحدد في كل معسكر مفعّل.",
-                  "mode_title" to "الوضع",
-                  "mode0" to "ترقية الحيوان الأليف",
-                  "mode1" to "تدريب القوات",
-                  "hint_troops" to "1. فعّل خدمة إمكانية الوصول\n2. افتح المعسكر على شاشة تدريب القوات\n3. اضغط START. سيضغط التطبيق تدريب ← تسريع ← استخدام سريع ← تطبيق ويكرر الدورة. لا يضغط أبدًا على أزرار «إنهاء» الصفراء بالجواهر",
                   "sub" to "ترقية تلقائية لخصائص الحيوانات الأليفة",
                   "tab_home" to "الرئيسية",
                   "tab_settings" to "الإعدادات",
@@ -345,7 +307,9 @@ jobs:
                   "svc_on" to "الخدمة مفعّلة",
                   "svc_off" to "الخدمة غير مفعّلة",
                   "enable" to "تفعيل خدمة إمكانية الوصول",
-                  "param_title" to "الخاصية المراد ترقيتها",
+                  "param_title" to "الخاصية 1 المراد ترقيتها",
+                  "param2_title" to "الخاصية 2 (اختياري)",
+                  "none" to "— بدون —",
                   "stat0" to "فتك المشاة",
                   "stat1" to "صحة المشاة",
                   "stat2" to "فتك الرماحة",
@@ -360,6 +324,12 @@ jobs:
                   "lang_title" to "اللغة",
                   "max_tries" to "الحد الأقصى للمحاولات",
                   "delay" to "التأخير بعد النقر (مللي ثانية)",
+                  "allow_minus" to "الاستبدال عند النقص",
+                  "allow_minus_hint" to "اضغط استبدال إذا انخفضت الخاصية قليلاً ونمت القوة الإجمالية",
+                  "on" to "تشغيل",
+                  "off" to "إيقاف",
+                  "power_th" to "حد نمو القوة (بكسل خضراء)",
+                  "minus_th" to "النقص المسموح (بكسل حمراء في الفرق)",
                   "support_title" to "ادعم المطوّر",
                   "support_text" to "إذا ساعدك هذا التطبيق فيمكنك دعم تطويره بتحويل إلى البطاقة. الدعم اختياري ولا يفتح أي ميزة.",
                   "card_label" to "رقم البطاقة",
@@ -409,8 +379,6 @@ jobs:
               private val cMuted = Color.parseColor("#9FB7D6")
               private val cGreen = Color.parseColor("#3DDC84")
               private val cRed = Color.parseColor("#FF5C5C")
-              private val cGold = Color.parseColor("#F5C451")
-              private val troopEdits = arrayOfNulls<EditText>(3)
 
               private var tab = 0
               private var statusDot: View? = null
@@ -418,7 +386,10 @@ jobs:
               private var enableBtn: TextView? = null
               private var maxEdit: EditText? = null
               private var delayEdit: EditText? = null
-              private val rowViews = ArrayList<TextView>()
+              private var powerEdit: EditText? = null
+              private var minusEdit: EditText? = null
+              private val rowViews1 = ArrayList<TextView>()
+              private val rowViews2 = ArrayList<TextView>()
 
               // ---------- helpers ----------
 
@@ -531,13 +502,15 @@ jobs:
 
               private fun render() {
                   saveSettings()
-                  rowViews.clear()
+                  rowViews1.clear()
+                  rowViews2.clear()
                   statusDot = null
                   statusText = null
                   enableBtn = null
                   maxEdit = null
                   delayEdit = null
-                  for (k in 0 until 3) troopEdits[k] = null
+                  powerEdit = null
+                  minusEdit = null
 
                   val outer = LinearLayout(this)
                   outer.orientation = LinearLayout.VERTICAL
@@ -597,6 +570,32 @@ jobs:
                   return bar
               }
 
+              private fun buildStatSelector(page: LinearLayout, titleKey: String, withNone: Boolean, views: ArrayList<TextView>, isFirst: Boolean) {
+                  val paramCard = card()
+                  paramCard.addView(text(L.t(titleKey), 12f, cMuted, true))
+                  val count = if (withNone) 7 else 6
+                  for (i in 0 until count) {
+                      val statIdx = if (withNone && i == 6) -1 else i
+                      val row = newRow()
+                      row.setOnClickListener {
+                          if (isFirst) {
+                              ClickService.rowA = statIdx
+                              if (ClickService.rowB == statIdx) ClickService.rowB = -1
+                          } else {
+                              ClickService.rowB = if (statIdx == ClickService.rowA) -1 else statIdx
+                          }
+                          ClickService.savePrefs(this)
+                          refreshRows()
+                      }
+                      views.add(row)
+                      paramCard.addView(row)
+                  }
+                  page.addView(paramCard)
+              }
+
+              private fun statLabel(idx: Int): String =
+                  if (idx < 0) L.t("none") else L.t("stat$idx")
+
               private fun buildHome(page: LinearLayout) {
                   // Статус службы
                   val statusCard = card()
@@ -621,41 +620,11 @@ jobs:
                   statusText = st
                   enableBtn = eb
 
-                  // Переключатель режима
-                  val seg = LinearLayout(this)
-                  seg.orientation = LinearLayout.HORIZONTAL
-                  seg.setPadding(dp(4), dp(4), dp(4), dp(4))
-                  seg.background = rounded(Color.parseColor("#26000000"), 16, Color.parseColor("#26FFFFFF"), 1)
-                  seg.layoutParams = matchWrap(16)
-                  for (m in 0 until 2) {
-                      val sel = m == ClickService.mode
-                      val b = text((if (m == 0) "🐾  " else "⚔️  ") + L.t("mode$m"), 14f, if (sel) cDark else Color.WHITE, true)
-                      b.gravity = Gravity.CENTER
-                      b.setPadding(dp(8), dp(12), dp(8), dp(12))
-                      b.background = if (sel) rounded(cAccent, 12, 0, 0) else rounded(Color.TRANSPARENT, 12, 0, 0)
-                      b.layoutParams = LinearLayout.LayoutParams(0, ViewGroup.LayoutParams.WRAP_CONTENT, 1f)
-                      b.setOnClickListener {
-                          ClickService.mode = m
-                          ClickService.savePrefs(this)
-                          render()
-                      }
-                      seg.addView(b)
-                  }
-                  page.addView(seg)
-
-                  // Крупные плитки трёх типов войск
-                  val head = text(L.t(if (ClickService.mode == 0) "param_title" else "troops_title"), 12f, cMuted, true)
-                  head.layoutParams = matchWrap(20)
-                  page.addView(head)
-                  for (kind in intArrayOf(2, 1, 0)) {
-                      page.addView(troopTile(kind))
-                  }
-                  if (ClickService.mode == 1) {
-                      val note = text(L.t("troops_note"), 12f, cMuted, false)
-                      note.setLineSpacing(0f, 1.2f)
-                      note.layoutParams = matchWrap(10)
-                      page.addView(note)
-                  }
+                  // Параметр 1
+                  buildStatSelector(page, "param_title", false, rowViews1, true)
+                  // Параметр 2 (необязательно)
+                  buildStatSelector(page, "param2_title", true, rowViews2, false)
+                  refreshRows()
 
                   // Старт
                   val show = button(L.t("show"), cGreen, cDark)
@@ -672,148 +641,10 @@ jobs:
                   }
                   page.addView(show)
 
-                  val hint = text(L.t(if (ClickService.mode == 0) "hint" else "hint_troops"), 13f, cMuted, false)
+                  val hint = text(L.t("hint"), 13f, cMuted, false)
                   hint.setLineSpacing(0f, 1.2f)
                   hint.layoutParams = matchWrap(18)
                   page.addView(hint)
-              }
-
-              private fun stepBtn(label: String): TextView {
-                  val v = text(label, 20f, cDark, true)
-                  v.gravity = Gravity.CENTER
-                  v.background = rounded(cAccent, 12, 0, 0)
-                  v.layoutParams = LinearLayout.LayoutParams(dp(44), dp(44))
-                  return v
-              }
-
-              // kind: 0 = пехота, 1 = копейщики, 2 = стрелки
-              private fun troopTile(kind: Int): LinearLayout {
-                  val pet = ClickService.mode == 0
-                  val on = if (pet) (ClickService.row / 2 == kind) else ClickService.troopOn[kind]
-                  val emojis = listOf("🛡️", "🔱", "🏹")
-                  val badgeColors = listOf("#D9534F", "#F0A030", "#8E6BFF")
-
-                  val tile = LinearLayout(this)
-                  tile.orientation = LinearLayout.VERTICAL
-                  tile.setPadding(dp(16), dp(16), dp(16), dp(16))
-                  val bg = GradientDrawable(
-                      GradientDrawable.Orientation.TL_BR,
-                      intArrayOf(Color.parseColor("#1C4375"), Color.parseColor("#0E2347"))
-                  )
-                  bg.cornerRadius = dp(22).toFloat()
-                  bg.setStroke(dp(if (on) 3 else 1), if (on) cGold else Color.parseColor("#3A6196"))
-                  tile.background = bg
-                  tile.layoutParams = matchWrap(14)
-
-                  // Шапка плитки: значок, название, переключатель
-                  val top = LinearLayout(this)
-                  top.orientation = LinearLayout.HORIZONTAL
-                  top.gravity = Gravity.CENTER_VERTICAL
-
-                  val badge = text(emojis[kind], 30f, Color.WHITE, false)
-                  badge.gravity = Gravity.CENTER
-                  val bb = GradientDrawable()
-                  bb.shape = GradientDrawable.OVAL
-                  bb.setColor(Color.parseColor(badgeColors[kind]))
-                  bb.setStroke(dp(2), Color.parseColor("#CCFFFFFF"))
-                  badge.background = bb
-                  val badgeLp = LinearLayout.LayoutParams(dp(64), dp(64))
-                  badgeLp.marginEnd = dp(14)
-                  top.addView(badge, badgeLp)
-
-                  val info = LinearLayout(this)
-                  info.orientation = LinearLayout.VERTICAL
-                  info.addView(text(L.t("troop$kind"), 20f, Color.WHITE, true))
-                  val subText = if (pet) {
-                      if (on) "✓ " + L.t(if (ClickService.row % 2 == 0) "lethality" else "health") else "—"
-                  } else {
-                      if (on) "✓ ×" + ClickService.troopCycles[kind] else L.t("off")
-                  }
-                  info.addView(text(subText, 12f, if (on) cGold else cMuted, false))
-                  top.addView(info, LinearLayout.LayoutParams(0, ViewGroup.LayoutParams.WRAP_CONTENT, 1f))
-
-                  if (!pet) {
-                      val pill = text(if (on) L.t("on") else L.t("off"), 12f, if (on) cDark else cMuted, true)
-                      pill.gravity = Gravity.CENTER
-                      pill.setPadding(dp(14), dp(8), dp(14), dp(8))
-                      pill.background = rounded(if (on) cGreen else Color.parseColor("#33FFFFFF"), 14, 0, 0)
-                      pill.setOnClickListener {
-                          ClickService.troopOn[kind] = !ClickService.troopOn[kind]
-                          ClickService.savePrefs(this)
-                          render()
-                      }
-                      top.addView(pill)
-                  }
-                  tile.addView(top)
-
-                  if (pet) {
-                      // Выбор параметра: смертоносность / здоровье
-                      val chips = LinearLayout(this)
-                      chips.orientation = LinearLayout.HORIZONTAL
-                      chips.layoutParams = matchWrap(14)
-                      for (j in 0 until 2) {
-                          val idx = kind * 2 + j
-                          val sel = ClickService.row == idx
-                          val label = (if (j == 0) "⚔️ " else "❤️ ") + L.t(if (j == 0) "lethality" else "health")
-                          val c = text(label, 14f, if (sel) cDark else Color.WHITE, true)
-                          c.gravity = Gravity.CENTER
-                          c.setPadding(dp(8), dp(12), dp(8), dp(12))
-                          c.background = if (sel) {
-                              rounded(cAccent, 14, 0, 0)
-                          } else {
-                              rounded(Color.parseColor("#1AFFFFFF"), 14, Color.parseColor("#33FFFFFF"), 1)
-                          }
-                          val lp = LinearLayout.LayoutParams(0, ViewGroup.LayoutParams.WRAP_CONTENT, 1f)
-                          if (j == 1) lp.marginStart = dp(10)
-                          c.layoutParams = lp
-                          c.setOnClickListener {
-                              ClickService.row = idx
-                              ClickService.savePrefs(this)
-                              render()
-                          }
-                          chips.addView(c)
-                      }
-                      tile.addView(chips)
-                  } else {
-                      // Количество циклов: [−] [число] [+]
-                      val ctl = LinearLayout(this)
-                      ctl.orientation = LinearLayout.HORIZONTAL
-                      ctl.gravity = Gravity.CENTER_VERTICAL
-                      ctl.layoutParams = matchWrap(14)
-                      ctl.addView(
-                          text(L.t("cycles"), 14f, Color.WHITE, false),
-                          LinearLayout.LayoutParams(0, ViewGroup.LayoutParams.WRAP_CONTENT, 1f)
-                      )
-
-                      val edit = EditText(this)
-                      edit.setText(ClickService.troopCycles[kind].toString())
-                      edit.setTextColor(Color.WHITE)
-                      edit.textSize = 16f
-                      edit.gravity = Gravity.CENTER
-                      edit.inputType = InputType.TYPE_CLASS_NUMBER
-                      edit.setPadding(dp(4), dp(8), dp(4), dp(8))
-                      edit.background = rounded(Color.parseColor("#33000000"), 12, Color.parseColor("#33FFFFFF"), 1)
-                      troopEdits[kind] = edit
-
-                      val minus = stepBtn("−")
-                      minus.setOnClickListener {
-                          val cur = edit.text.toString().toIntOrNull() ?: 1
-                          edit.setText((cur - 1).coerceAtLeast(1).toString())
-                      }
-                      val plus = stepBtn("+")
-                      plus.setOnClickListener {
-                          val cur = edit.text.toString().toIntOrNull() ?: 0
-                          edit.setText((cur + 1).coerceAtMost(9999).toString())
-                      }
-                      val editLp = LinearLayout.LayoutParams(dp(76), dp(44))
-                      editLp.marginStart = dp(8)
-                      editLp.marginEnd = dp(8)
-                      ctl.addView(minus)
-                      ctl.addView(edit, editLp)
-                      ctl.addView(plus)
-                      tile.addView(ctl)
-                  }
-                  return tile
               }
 
               private fun buildSettings(page: LinearLayout) {
@@ -848,6 +679,38 @@ jobs:
                   page.addView(setCard)
                   maxEdit = me
                   delayEdit = de
+
+                  // Замена при минусе
+                  val minusCard = card()
+                  minusCard.addView(text(L.t("allow_minus"), 12f, cMuted, true))
+                  val hint = text(L.t("allow_minus_hint"), 13f, cMuted, false)
+                  hint.setLineSpacing(0f, 1.2f)
+                  hint.layoutParams = matchWrap(6)
+                  minusCard.addView(hint)
+                  for (i in 0 until 2) {
+                      val on = i == 0
+                      val row = newRow()
+                      styleRow(row, L.t(if (on) "on" else "off"), ClickService.allowMinus == on)
+                      row.setOnClickListener {
+                          ClickService.allowMinus = on
+                          ClickService.savePrefs(this)
+                          render()
+                      }
+                      minusCard.addView(row)
+                  }
+                  val lp3 = text(L.t("power_th"), 14f, Color.WHITE, false)
+                  lp3.layoutParams = matchWrap(12)
+                  minusCard.addView(lp3)
+                  val pe = input(ClickService.powerThresh.toString())
+                  minusCard.addView(pe)
+                  val lm = text(L.t("minus_th"), 14f, Color.WHITE, false)
+                  lm.layoutParams = matchWrap(12)
+                  minusCard.addView(lm)
+                  val mne = input(ClickService.minusThresh.toString())
+                  minusCard.addView(mne)
+                  page.addView(minusCard)
+                  powerEdit = pe
+                  minusEdit = mne
               }
 
               private fun buildSupport(page: LinearLayout) {
@@ -919,8 +782,12 @@ jobs:
               // ---------- state ----------
 
               private fun refreshRows() {
-                  for (i in rowViews.indices) {
-                      styleRow(rowViews[i], L.t("stat$i"), i == ClickService.row)
+                  for (i in rowViews1.indices) {
+                      styleRow(rowViews1[i], statLabel(i), i == ClickService.rowA)
+                  }
+                  for (i in rowViews2.indices) {
+                      val statIdx = if (i == 6) -1 else i
+                      styleRow(rowViews2[i], statLabel(statIdx), statIdx == ClickService.rowB)
                   }
               }
 
@@ -938,22 +805,16 @@ jobs:
               }
 
               private fun saveSettings() {
-                  var changed = false
-                  for (k in 0 until 3) {
-                      val e = troopEdits[k]
-                      if (e != null) {
-                          ClickService.troopCycles[k] = (e.text.toString().toIntOrNull() ?: 10).coerceIn(1, 9999)
-                          changed = true
-                      }
-                  }
                   val m = maxEdit
                   val d = delayEdit
-                  if (m != null && d != null) {
-                      ClickService.maxTries = (m.text.toString().toIntOrNull() ?: 300).coerceAtLeast(1)
-                      ClickService.delayMs = (d.text.toString().toLongOrNull() ?: 1300L).coerceAtLeast(300L)
-                      changed = true
-                  }
-                  if (changed) ClickService.savePrefs(this)
+                  if (m == null || d == null) return
+                  ClickService.maxTries = (m.text.toString().toIntOrNull() ?: 300).coerceAtLeast(1)
+                  ClickService.delayMs = (d.text.toString().toLongOrNull() ?: 1300L).coerceAtLeast(300L)
+                  val p = powerEdit
+                  if (p != null) ClickService.powerThresh = (p.text.toString().toIntOrNull() ?: 60).coerceAtLeast(1)
+                  val mn = minusEdit
+                  if (mn != null) ClickService.minusThresh = (mn.text.toString().toIntOrNull() ?: 2000).coerceAtLeast(0)
+                  ClickService.savePrefs(this)
               }
           }
           EOF_9
@@ -984,16 +845,23 @@ jobs:
 
               companion object {
                   var instance: ClickService? = null
-                  var row: Int = 4
-                  var mode: Int = 0   // 0 = питомцы, 1 = тренировка войск
+                  var rowA: Int = 4
+                  var rowB: Int = -1
                   var maxTries: Int = 300
                   var delayMs: Long = 1300L
+                  var allowMinus: Boolean = false
+                  var powerThresh: Int = 60
+                  var minusThresh: Int = 2000
 
                   // Опорные координаты со скриншота 1189 x 2576
                   const val REF_W = 1189f
                   const val REF_H = 2576f
                   val ROW_Y = floatArrayOf(1228f, 1360f, 1488f, 1618f, 1748f, 1878f)
                   const val ARROW_X = 1057f
+                  // Область подписи дельты слева от стрелки ("+0.02%" / "-0.05%")
+                  const val DELTA_X0 = 850f
+                  const val DELTA_X1 = 1040f
+                  const val DELTA_HALF_H = 40f
                   val BTN_RETRY = floatArrayOf(352f, 2272f)
                   val BTN_REPLACE = floatArrayOf(836f, 2272f)
                   val BTN_COMPLETE = floatArrayOf(595f, 2285f)
@@ -1002,47 +870,27 @@ jobs:
                   // Область с приростом общей мощности сверху ("+3 000" и стрелка): левый, верхний, правый, нижний
                   val POWER_BOX = floatArrayOf(500f, 1060f, 960f, 1130f)
 
-                  // Режим "Тренировка войск": точки проверки экрана и нажатия (опорные координаты)
-                  val TROOP_D_CHECK = floatArrayOf(400f, 1920f)   // синяя кнопка "Применить" (подтверждение)
-                  val TROOP_C_CHECK = floatArrayOf(420f, 1770f)   // синяя кнопка "Быстрое применение"
-                  val TROOP_B_CHECK = floatArrayOf(1027f, 1988f)  // красная круглая кнопка в очереди тренировки
-                  val TROOP_A_CHECK = floatArrayOf(200f, 2078f)   // зелёная полоса ползунка количества
-                  val TROOP_D_APPLY = floatArrayOf(595f, 1920f)
-                  val TROOP_C_QUICK = floatArrayOf(595f, 1768f)
-                  val TROOP_RIGHT_BTN = floatArrayOf(874f, 2312f) // "Обучение" / "Ускорение"
-
-                  // Какие лагеря включены и сколько циклов в каждом (0 = пехота, 1 = копейщики, 2 = стрелки)
-                  val troopOn = booleanArrayOf(true, true, true)
-                  val troopCycles = intArrayOf(10, 10, 10)
-                  // Порядок обхода лагерей: стрелки, копейщики, пехота
-                  val TROOP_ORDER = intArrayOf(2, 1, 0)
-                  // Вкладки лагерей внизу экрана: пехота, копейщики, стрелки
-                  val TAB_X = floatArrayOf(220f, 595f, 968f)
-                  const val TAB_Y = 2495f
-
                   fun loadPrefs(ctx: Context) {
                       val sp = ctx.getSharedPreferences("wos", Context.MODE_PRIVATE)
-                      row = sp.getInt("row", row).coerceIn(0, 5)
-                      mode = sp.getInt("mode", mode).coerceIn(0, 1)
-                      for (k in 0 until 3) {
-                          troopOn[k] = sp.getBoolean("troopOn$k", troopOn[k])
-                          troopCycles[k] = sp.getInt("troopCyc$k", troopCycles[k]).coerceIn(1, 9999)
-                      }
+                      rowA = sp.getInt("rowA", sp.getInt("row", rowA)).coerceIn(0, 5)
+                      rowB = sp.getInt("rowB", -1).coerceIn(-1, 5)
                       maxTries = sp.getInt("max", maxTries)
                       delayMs = sp.getLong("delay", delayMs)
+                      allowMinus = sp.getBoolean("allowMinus", allowMinus)
+                      powerThresh = sp.getInt("powerTh", powerThresh)
+                      minusThresh = sp.getInt("minusTh", minusThresh)
                   }
 
                   fun savePrefs(ctx: Context) {
-                      val e = ctx.getSharedPreferences("wos", Context.MODE_PRIVATE).edit()
-                      e.putInt("row", row)
-                      e.putInt("mode", mode)
-                      e.putInt("max", maxTries)
-                      e.putLong("delay", delayMs)
-                      for (k in 0 until 3) {
-                          e.putBoolean("troopOn$k", troopOn[k])
-                          e.putInt("troopCyc$k", troopCycles[k])
-                      }
-                      e.apply()
+                      ctx.getSharedPreferences("wos", Context.MODE_PRIVATE).edit()
+                          .putInt("rowA", rowA)
+                          .putInt("rowB", rowB)
+                          .putInt("max", maxTries)
+                          .putLong("delay", delayMs)
+                          .putBoolean("allowMinus", allowMinus)
+                          .putInt("powerTh", powerThresh)
+                          .putInt("minusTh", minusThresh)
+                          .apply()
                   }
               }
 
@@ -1050,12 +898,6 @@ jobs:
               private var running = false
               private var tries = 0
               private var btn: TextView? = null
-              private var lastState = ' '
-              private var sameCount = 0
-              private var unknownCount = 0
-              private var campPos = 0
-              private var campDone = 0
-              private var needSwitch = true
 
               private fun dp(v: Int): Int = (v * resources.displayMetrics.density).toInt()
 
@@ -1098,19 +940,6 @@ jobs:
                   running = !running
                   if (running) {
                       tries = 0
-                      lastState = ' '
-                      sameCount = 0
-                      unknownCount = 0
-                      if (mode == 1) {
-                          campPos = nextCamp(-1)
-                          campDone = 0
-                          needSwitch = true
-                          if (campPos < 0) {
-                              running = false
-                              setLabel("⚠ 0")
-                              return
-                          }
-                      }
                       setLabel("■ STOP")
                       step()
                   } else {
@@ -1181,7 +1010,7 @@ jobs:
 
               private fun step() {
                   if (!running) return
-                  if (mode == 0 && tries >= maxTries) {
+                  if (tries >= maxTries) {
                       running = false
                       setLabel("✔ DONE")
                       return
@@ -1227,7 +1056,7 @@ jobs:
                   return total > 0 && hit * 100 / total >= 70
               }
 
-              private fun countGreen(bmp: Bitmap, box: FloatArray): Int {
+              private fun countColor(bmp: Bitmap, box: FloatArray, wantGreen: Boolean): Int {
                   val x0 = maxOf((box[0] / REF_W * bmp.width).toInt(), 0)
                   val y0 = maxOf((box[1] / REF_H * bmp.height).toInt(), 0)
                   val x1 = minOf((box[2] / REF_W * bmp.width).toInt(), bmp.width)
@@ -1236,123 +1065,56 @@ jobs:
                   for (x in x0 until x1) {
                       for (y in y0 until y1) {
                           val p = bmp.getPixel(x, y)
-                          if (Color.green(p) > 150 && Color.red(p) < 130 && Color.blue(p) < 130) n++
+                          if (wantGreen) {
+                              if (Color.green(p) > 150 && Color.red(p) < 130 && Color.blue(p) < 130) n++
+                          } else {
+                              if (Color.red(p) > 170 && Color.green(p) < 110 && Color.blue(p) < 110) n++
+                          }
                       }
                   }
                   return n
               }
 
-              private fun frac(bmp: Bitmap, refX: Float, refY: Float, pred: (Int) -> Boolean): Int {
-                  val cx = (refX / REF_W * bmp.width).toInt()
-                  val cy = (refY / REF_H * bmp.height).toInt()
-                  val half = maxOf((0.006f * bmp.width).toInt(), 2)
-                  var hit = 0
-                  var total = 0
-                  for (x in maxOf(cx - half, 0) until minOf(cx + half, bmp.width)) {
-                      for (y in maxOf(cy - half, 0) until minOf(cy + half, bmp.height)) {
-                          total++
-                          if (pred(bmp.getPixel(x, y))) hit++
-                      }
-                  }
-                  return if (total == 0) 0 else hit * 100 / total
-              }
+              // Сканирует строку statIdx: стрелка (зелёная/красная) и красная дельта слева от неё
+              private class RowScan(val green: Int, val red: Int, val deltaRed: Int)
 
-              private fun nextCamp(from: Int): Int {
-                  for (p in from + 1 until TROOP_ORDER.size) {
-                      if (troopOn[TROOP_ORDER[p]]) return p
-                  }
-                  return -1
-              }
-
-              private fun campIcon(k: Int): String = when (k) {
-                  0 -> "🛡"
-                  1 -> "🔱"
-                  else -> "🏹"
-              }
-
-              private fun switchCamp(camp: Int, w: Int, h: Int) {
-                  needSwitch = false
-                  campDone = 0
-                  sameCount = 0
-                  lastState = ' '
-                  setLabel("■ " + campIcon(camp))
-                  tap(TAB_X[camp] / REF_W * w, TAB_Y / REF_H * h)
-                  handler.postDelayed({ step() }, delayMs)
-              }
-
-              // Тренировка войск: переключение лагерей + цикл A (Обучение) -> B (Ускорение) -> C (Быстрое применение) -> D (Применить) -> A
-              private fun decideTroops(bmp: Bitmap) {
+              private fun scanRow(bmp: Bitmap, statIdx: Int): RowScan {
                   val w = bmp.width
                   val h = bmp.height
-                  val isD = frac(bmp, TROOP_D_CHECK[0], TROOP_D_CHECK[1]) { isBlueBtn(it) } >= 70
-                  val isC = frac(bmp, TROOP_C_CHECK[0], TROOP_C_CHECK[1]) { isBlueBtn(it) } >= 70
-                  val isB = frac(bmp, TROOP_B_CHECK[0], TROOP_B_CHECK[1]) { isRedBtn(it) } >= 50
-                  val isA = frac(bmp, TROOP_A_CHECK[0], TROOP_A_CHECK[1]) { isGreenBar(it) } >= 70
-                  bmp.recycle()
-
-                  val state = if (isD) 'D' else if (isC) 'C' else if (isB) 'B' else if (isA) 'A' else '?'
-
-                  if (state == '?') {
-                      unknownCount++
-                      if (unknownCount >= 10) {
-                          running = false
-                          setLabel("⚠ ?")
-                          return
+                  val cx = (ARROW_X / REF_W * w).toInt()
+                  val cy = (ROW_Y[statIdx] / REF_H * h).toInt()
+                  val half = (0.03f * w).toInt()
+                  var green = 0
+                  var red = 0
+                  val ax0 = maxOf(cx - half, 0)
+                  val ax1 = minOf(cx + half, w)
+                  val ay0 = maxOf(cy - half, 0)
+                  val ay1 = minOf(cy + half, h)
+                  for (x in ax0 until ax1) {
+                      for (y in ay0 until ay1) {
+                          val p = bmp.getPixel(x, y)
+                          val r = Color.red(p)
+                          val g = Color.green(p)
+                          val bl = Color.blue(p)
+                          if (g > 150 && r < 130 && bl < 130) green++
+                          else if (r > 170 && g < 110 && bl < 110) red++
                       }
-                      setLabel("■ $tries  ?")
-                      handler.postDelayed({ step() }, delayMs)
-                      return
                   }
-                  unknownCount = 0
-
-                  val camp = TROOP_ORDER[campPos]
-
-                  // Вкладки лагерей видны на экранах A и B
-                  if ((state == 'A' || state == 'B') && needSwitch) {
-                      switchCamp(camp, w, h)
-                      return
-                  }
-
-                  // В этом лагере все циклы выполнены -> следующий лагерь или конец
-                  if (state == 'A' && campDone >= troopCycles[camp]) {
-                      val nxt = nextCamp(campPos)
-                      if (nxt < 0) {
-                          running = false
-                          setLabel("✔ DONE")
-                          return
+                  val dx0 = maxOf((DELTA_X0 / REF_W * w).toInt(), 0)
+                  val dx1 = minOf((DELTA_X1 / REF_W * w).toInt(), w)
+                  val dy0 = maxOf(((ROW_Y[statIdx] - DELTA_HALF_H) / REF_H * h).toInt(), 0)
+                  val dy1 = minOf(((ROW_Y[statIdx] + DELTA_HALF_H) / REF_H * h).toInt(), h)
+                  var deltaRed = 0
+                  for (x in dx0 until dx1) {
+                      for (y in dy0 until dy1) {
+                          val p = bmp.getPixel(x, y)
+                          if (Color.red(p) > 170 && Color.green(p) < 110 && Color.blue(p) < 110) deltaRed++
                       }
-                      campPos = nxt
-                      switchCamp(TROOP_ORDER[nxt], w, h)
-                      return
                   }
-
-                  if (state == lastState) sameCount++ else sameCount = 0
-                  lastState = state
-                  if (sameCount >= 5) {
-                      running = false
-                      setLabel("⚠ $state")
-                      return
-                  }
-
-                  val pt = when (state) {
-                      'D' -> TROOP_D_APPLY
-                      'C' -> TROOP_C_QUICK
-                      else -> TROOP_RIGHT_BTN
-                  }
-                  if (state == 'A') {
-                      campDone++
-                      tries++
-                  }
-                  setLabel("■ ${campIcon(camp)} $campDone/${troopCycles[camp]}  $state")
-                  tap(pt[0] / REF_W * w, pt[1] / REF_H * h)
-                  handler.postDelayed({ step() }, delayMs)
+                  return RowScan(green, red, deltaRed)
               }
 
               private fun decide(bmp: Bitmap) {
-                  if (mode == 1) {
-                      decideTroops(bmp)
-                      return
-                  }
                   val w = bmp.width
                   val h = bmp.height
 
@@ -1365,36 +1127,43 @@ jobs:
                       return
                   }
 
-                  val cx = (ARROW_X / REF_W * w).toInt()
-                  val cy = (ROW_Y[row] / REF_H * h).toInt()
-                  val half = (0.03f * w).toInt()
-                  var green = 0
-                  var red = 0
-                  val x0 = maxOf(cx - half, 0)
-                  val x1 = minOf(cx + half, w)
-                  val y0 = maxOf(cy - half, 0)
-                  val y1 = minOf(cy + half, h)
-                  for (x in x0 until x1) {
-                      for (y in y0 until y1) {
-                          val p = bmp.getPixel(x, y)
-                          val r = Color.red(p)
-                          val g = Color.green(p)
-                          val bl = Color.blue(p)
-                          if (g > 150 && r < 130 && bl < 130) green++
-                          else if (r > 170 && g < 110 && bl < 110) red++
-                      }
-                  }
-                  val powerGreen = countGreen(bmp, POWER_BOX)
+                  val scale = (w / REF_W) * (h / REF_H)
+                  val rows = ArrayList<Int>()
+                  rows.add(rowA)
+                  if (rowB in 0..5 && rowB != rowA) rows.add(rowB)
+
+                  val scans = ArrayList<RowScan>()
+                  for (r in rows) scans.add(scanRow(bmp, r))
+                  val powerGreen = countColor(bmp, POWER_BOX, true)
                   bmp.recycle()
 
-                  val scale = (w / REF_W) * (w / REF_W)
-                  val powerUp = powerGreen >= maxOf((60 * scale).toInt(), 15)
-                  val arrowGreen = green > 40 && green > red
-                  val noArrow = green < 25 && red < 25
-                  // Заменить: зелёная стрелка у параметра, либо стрелки нет, но общая мощность выросла
-                  val replace = arrowGreen || (noArrow && powerUp)
+                  fun greenArrow(s: RowScan) = s.green > (40 * scale).toInt() && s.green > s.red
+                  fun redArrow(s: RowScan) = s.red > (40 * scale).toInt() && s.red >= s.green
+                  fun noArrow(s: RowScan) =
+                      s.green < (25 * scale).toInt() && s.red < (25 * scale).toInt()
+
+                  val powerUp = powerGreen >= maxOf((powerThresh * scale).toInt(), 15)
+                  val anyGreen = scans.any { greenArrow(it) }
+                  // Красные стрелки допустимы, только если включён allowMinus и дельта не больше порога
+                  val redOk = scans.all {
+                      !redArrow(it) || (allowMinus && it.deltaRed <= (minusThresh * scale).toInt())
+                  }
+                  val allNoArrow = scans.all { noArrow(it) }
+
+                  // Заменить: зелёная стрелка хотя бы у одного параметра,
+                  // либо (стрелок нет, но мощность выросла),
+                  // либо (включён режим "минус", красные дельты маленькие и мощность выросла)
+                  val replace = anyGreen || (powerUp && (allNoArrow || redOk))
+
+                  val s0 = scans[0]
+                  val dbg = if (scans.size > 1) {
+                      val s1 = scans[1]
+                      "G${s0.green}/${s1.green} R${s0.red}/${s1.red} D${s0.deltaRed}/${s1.deltaRed} P$powerGreen"
+                  } else {
+                      "G${s0.green} R${s0.red} D${s0.deltaRed} P$powerGreen"
+                  }
                   val target = if (replace) BTN_REPLACE else BTN_RETRY
-                  setLabel("■ ${tries + 1}  G$green R$red P$powerGreen")
+                  setLabel("■ ${tries + 1}  $dbg")
                   tap(target[0] / REF_W * w, target[1] / REF_H * h)
                   tries++
                   handler.postDelayed({ step() }, delayMs)
@@ -1408,15 +1177,6 @@ jobs:
                   dispatchGesture(gesture, null, null)
               }
           }
-
-          private fun isBlueBtn(p: Int): Boolean =
-              Color.blue(p) > 215 && Color.green(p) > 125 && Color.red(p) < 165
-
-          private fun isRedBtn(p: Int): Boolean =
-              Color.red(p) > 200 && Color.green(p) < 120 && Color.blue(p) < 90
-
-          private fun isGreenBar(p: Int): Boolean =
-              Color.green(p) > 170 && Color.red(p) < 110 && Color.blue(p) < 130
           EOF_10
       - name: Build
         run: gradle assembleDebug --no-daemon --stacktrace
